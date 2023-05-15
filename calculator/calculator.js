@@ -1,5 +1,13 @@
-
 const calculator = {
+
+    display: null,
+
+    buttons: null,
+
+    themeToggleBtn: null,
+
+    calculator: null,
+    
     launch() {
         this.getElement();
         this.bindEvent();
