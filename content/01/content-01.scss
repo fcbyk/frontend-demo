@@ -4,16 +4,16 @@
     margin: 0;
     padding: 0;
 }
-.flex(@a,@b){
+@mixin flex($a,$b){
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: @a;
-    width: @b;
+    height: $a;
+    width: $b;
 }
 .contain{
-    .flex(600px, 100%);
+    @include flex(600px, 100%);
     .card{
         position: relative;
         width: 300px+100px;

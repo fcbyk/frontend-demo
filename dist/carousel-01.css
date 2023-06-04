@@ -1,0 +1,62 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #dab8b8;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.a {
+  position: relative;
+  width: 650px;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 5px solid white; */
+}
+
+.a .b {
+  width: 400px;
+  height: 500px;
+  transition: .4s;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.a .c {
+  width: 200px;
+  height: 500px;
+  display: flex;
+  /* 纵向布局 */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a .c .d {
+  position: relative;
+  width: 200px;
+  height: 90px;
+  right: 0;
+  transition: .5s;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.a .c .d img {
+  position: absolute;
+  width: 200px;
+  /* 小图片上移 */
+  transform: translate(0, -50px);
+  transition: .5s;
+  right: 0;
+}
+
+.a .c .d.dd {
+  opacity: 0;
+  right: 250px;
+}

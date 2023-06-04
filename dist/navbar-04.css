@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  background-color: #e3e3e3;
+  height: 60px;
+  align-items: center;
+  /* border: solid; */
+  width: 100%;
+}
+
+nav #left {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 50px;
+  /* margin-bottom: 20px; */
+  /* border: solid; */
+}
+
+nav #left h2 {
+  color: #1b1b1b;
+}
+
+nav #nav-check {
+  display: none;
+}
+
+nav label[for="nav-check"] {
+  display: none;
+}
+
+nav #right {
+  display: flex;
+  /* border: solid; */
+}
+
+nav #right ul {
+  display: flex;
+  list-style: none;
+  /* border: solid; */
+  align-items: center;
+}
+
+nav #right ul li {
+  margin: 0px 20px;
+}
+
+nav #right ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #474747;
+}
+
+nav #right ul li a:hover {
+  color: black;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    background-color: #e3e3e3;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+    /* label[for="nav-check"]:hover{
+            color: rgb(40, 40, 40);
+        } */
+  }
+  nav #left {
+    padding: 10px;
+  }
+  nav label[for="nav-check"] {
+    display: initial;
+    margin-right: 50px;
+    font-size: 20px;
+    color: #535353;
+  }
+  nav #nav-check:checked + label {
+    color: #282828;
+  }
+  nav #nav-check:checked ~ #right {
+    display: flex;
+  }
+  nav #right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 50px;
+    margin: 0;
+    background-color: inherit;
+  }
+  nav #right ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  nav #right ul li {
+    width: 85%;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    border-top: 2px solid #dbdbdb;
+  }
+  nav #right ul li a {
+    margin-left: 5px;
+  }
+}

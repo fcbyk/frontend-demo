@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* 这个注释会被编译 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 600px;
+  width: 100%;
+}
+
+.contain .card {
+  position: relative;
+  width: 400px;
+  height: 260px;
+  margin: 30px;
+  background-color: #6a90d2;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  border-radius: 15px;
+}
+
+.contain .card .imag img {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  left: 30px;
+  bottom: 30px;
+  border-radius: 15px;
+}
+
+.contain .card .chinese {
+  position: relative;
+  bottom: 200px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px;
+  color: aliceblue;
+}
+
+.contain .card:hover {
+  height: 460px;
+}
+
+.contain .card:hover .chinese {
+  bottom: 0px;
+  visibility: visible;
+  opacity: 1;
+}

@@ -27,35 +27,41 @@ body{
     /* 设置过渡 */
     transition: 0.3s;
 }
+
 /* 冒号 */
 .colon{
     /* 垂直居中（偏上一点） */
     transform: translateY(calc(50vh - 55px));
     /* 过渡 */
     transition: 0.3s;
+    &::after{
+        content: ":";
+    }
 }
-.colon::after{
-    content: ":";
-}
+
 /* 数字默认样式 */
-.num{
+.num {
     opacity: 0.25;
     transition: 0.5s;
-}
-/* 当前时间（正中间数字） */
-.num.visible{
-    opacity: 1;
-    text-shadow: 1px 1px 0 #2c6299;
-}
-/* 邻近的 */
-.num.near{
-    opacity: 0.35;
-}
-/* 远的 */
-.num.far{
-    opacity: 0.15;
-}
-/* 更远的（越远越透明） */
-.num.distant{
-    opacity: 0.1;
+
+    /* 当前时间（正中间数字） */
+    &.visible {
+        opacity: 1;
+        text-shadow: 1px 1px 0 #2c6299;
+    }
+
+    /* 邻近的 */
+    &.near {
+        opacity: 0.35;
+    }
+
+    /* 远的 */
+    &.far {
+        opacity: 0.15;
+    }
+
+    /* 更远的（越远越透明） */
+    &.distant {
+        opacity: 0.1;
+    }
 }
