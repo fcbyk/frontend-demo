@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "outDir": "./generated/js",
+        "rootDir": "./"
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["./generated/js"]
+}
